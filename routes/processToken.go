@@ -20,7 +20,7 @@ func ProcessToken(token string) (*models.Claim, bool, string, error) {
 	key := []byte("my_secret_key")
 	claims := &models.Claim{}
 
-	splitToken := strings.Split(token, "Bearer ")
+	splitToken := strings.Split(token, "Bearer")
 	if len(splitToken) != 2 {
 		return claims, false, "", errors.New("invalid token")
 	}
